@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 html, body {
   height: 100%; }
 
@@ -152,13 +156,37 @@ i {
 
 .course_checkbox {
   height: 35px;
-  background-color: grey; }
+  background-color: #F6F7F2;
+  user-select: none; }
 
-#checkbox {
-  margin-left: 10px; }
+.chexbox_wrapper {
+  margin-left: 10px;
+  margin-bottom: 10px; }
 
-label {
-  padding-left: 10px; }
+.checkbox {
+  display: none; }
+
+.checkbox-custom {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 3px; }
+
+.checkbox-custom,
+.label {
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none; }
+
+.checkbox:checked + .checkbox-custom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #F78827 url("./../img/icon.svg") no-repeat;
+  background-size: cover;
+  height: 20px;
+  width: 20px; }
 
 .course_h {
   margin: 0; }
@@ -183,4 +211,5 @@ label {
   flex: 0 0 auto;
   margin: 0 auto;
   color: #fff;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
